@@ -44,14 +44,15 @@
 			></svg
 		>
 	</a>
-	<ul class="flex gap-11 mr-auto text-dark font-semibold">
+	<ul class="flex gap-11 mr-auto text-dark font-semibold not-selectable">
 		<li class="link-hovered">Overview</li>
 		<li class="link-hovered">Examples</li>
 		<li class="text-darker link-hovered">Tour</li>
 		<li class="link-hovered">Blog</li>
 		<li class="link-hovered">Help</li>
 	</ul>
-	<button class="bg-primary text-white font-bold px-[1.40rem] py-[0.6rem] rounded-full"
+	<button
+		class="bg-primary text-white font-bold px-[1.40rem] py-[0.6rem] rounded-full not-selectable"
 		>Download</button
 	>
 </header>
@@ -73,5 +74,22 @@
 
 	button {
 		transition: all 0.2s ease-in-out;
+	}
+
+	::selection {
+		background-color: #d0fcf4;
+	}
+
+	.not-selectable {
+		user-select: none;
+	}
+
+	/* Make the Header sticky at the top of the page */
+	header {
+		position: sticky;
+		top: 0;
+		z-index: 1;
+		background-color: rgba(255, 255, 255, 0.7);
+		backdrop-filter: blur(20px);
 	}
 </style>
