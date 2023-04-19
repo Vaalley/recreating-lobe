@@ -1,4 +1,5 @@
 <script>
+	import Footer from '../components/Footer.svelte';
 	import Header from '../components/Header.svelte';
 	import Hero from '../components/Hero.svelte';
 </script>
@@ -11,4 +12,5 @@
 <body>
 	<Header />
 	<Hero />
+	<Footer />
 </body>
